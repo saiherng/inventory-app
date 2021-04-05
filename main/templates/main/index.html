@@ -54,7 +54,7 @@
       {% for item in items %}
       <tr>
         <th scope="row">{{item.id}}</th>
-        <td>{{ item.name }}</td>
+        <td><a href="/item/{{item.id}}">{{ item.name }}</a></td>
         <td>{{ item.quantity }}</td>
         <td>{{ item.getPrice }}</td>
         <td>{{ item.buy_date }}</td>
