@@ -12,21 +12,63 @@
     <title>Item info</title>
   </head>
   <body>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{item.name}}</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{item.quantity}}</li>
-          <li class="list-group-item">{{item.buy_date}}</li>
-          <li class="list-group-item">{{item.retail_price}}</li>
-        </ul>
-        <div class="card-body">
-            <button type="button" class="btn btn-success">Buy</button>
-            <button type="button" class="btn btn-info">Update</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">Company Name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+          </ul>
+          
         </div>
       </div>
+    </nav>
+
+    
+
+    <div class="container mt-5 ">
+
+      
+
+      <div class="row float-right">
+        <a class="btn btn-primary mb-6 mt-3 " href="/" role="button">Back</a>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <img src="https://economictimes.indiatimes.com/thumb/msid-72084430,width-1200,height-900,resizemode-4,imgsize-454880/the-company-found-the-diamond-in-september-at-its-cullinan-mine-famous-for-producing-expensive-gems-including-those-in-the-british-crown-jewels-.jpg?from=mdr" alt="..." class="img-thumbnail">
+            
+  
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Quantity: {{item.quantity}}</li>
+            <li class="list-group-item">Buy Date: {{item.buy_date}}</li>
+            <li class="list-group-item">{{item.getPrice}}</li>
+          </ul>
+          <div class="card-body">
+              <button type="button" class="btn btn-success">Buy</button>
+              <button type="button" class="btn btn-info">Update</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    
+    <footer class="text-center text-white fixed-bottom" style="background-color: #c6c6c6;">
+   
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(223, 219, 219, 0.2);">
+        <p>© 2020 Copyright | Developled by Sai Herng</p>
+      </div>
+      <!-- Copyright -->
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

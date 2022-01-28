@@ -10,7 +10,15 @@ from .models import Item
 def index(request):
 
     items = Item.objects.order_by('id')
-    context = {'items': items}
+
+    total_price = 0
+    for item in items:
+        total_price += item.retail_price
+
+    context = {
+        'items': items,
+        'total_price': str(total_price) + " Kyats"
+    }
 
     return render(request, 'main/index.html', context)
 

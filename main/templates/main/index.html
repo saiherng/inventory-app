@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Material Design for Bootstrap</title>
+  <title>Inventory App</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -34,24 +34,43 @@
 </head>
 
 <body>
-  <!-- Start your project here-->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Wang Jades</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
 
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand">Inventory App</a>
-
+        </ul>
+        <a href="/admin" role="button" class="btn btn-success" >Login</a>
+      </div>
     </div>
-    
   </nav>
   
- <table id="dtBasicExample" class="table table-striped table-hover" style="width:100%">
+
+  <div class="container mb-3 mt-3">
+    <section><h2>Inventory Table </h2></section>
+  </div>
+  
+<div class="container mb-3">
+  <table id="dtBasicExample" class="table table-striped table-hover" style="width:100%">
     <thead class="dataTables">
       <tr>
         <th scope="col">ID</th>
+        <th scope="col">Image</th>
         <th scope="col">Name</th>
         <th scope="col">Quantity</th>
         <th scope="col">Retail Price</th>
         <th scope="col">Date</th>
+        <th scope="col">Location</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -59,23 +78,32 @@
       {% for item in items %}
       <tr>
         <th scope="row">{{item.id}}</th>
-        <td><a href="/item/{{item.id}}">{{ item.name }}</a></td>
+        <td>Image</td>
+        <td>{{ item.name }}</td>
         <td>{{ item.quantity }}</td>
         <td>{{ item.getPrice }}</td>
         <td>{{ item.buy_date }}</td>
+        <td>{{item.location }}</td>
+        <td><a href="/item/{{item.id}}" role="button" class="btn btn-info">Info</a></td>
 
       </tr>
       {% endfor %}
     </tbody>
 
   </table>
+
   </div> 
 
+  <footer class="text-center text-white fixed-bottom" style="background-color: #c6c6c6;">
+   
+    
+    <div class="text-center p-3" style="background-color: rgba(223, 219, 219, 0.2);">
+      <p>© 2020 Copyright | by Sai Herng</p>
+    </div>
+    
+  </footer>
+
   
-
-
-
-
   <!-- End your project here-->
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
